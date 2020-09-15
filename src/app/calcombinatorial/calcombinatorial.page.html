@@ -1,0 +1,84 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Teoría Combinatoria</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-text color="primary" class="ion-text-center">
+    <h2>Selecione los criterios</h2>
+  </ion-text>
+  <ion-card>
+    <ion-segment (ionChange)="orderChanged($event)">
+      <ion-segment-button value="orderimportant">
+        <ion-label>importa el orden</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="ordernotimportant">
+        <ion-label>No importa el orden</ion-label>
+      </ion-segment-button>
+    </ion-segment>
+  </ion-card>
+  <ion-card>
+    <ion-segment *ngIf="order != 'ordernotimportant'"
+      (ionChange)="useallChanged($event)">
+      <ion-segment-button value="useall">
+        <ion-label>Se usan todos</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="notuseall">
+        <ion-label>No se usan todos</ion-label>
+      </ion-segment-button>
+    </ion-segment>
+  </ion-card>
+  <ion-card>
+    <ion-segment (ionChange)="repetitionChanged($event)">
+      <ion-segment-button value="repeating">
+        <ion-label>Se repiten</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="notrepeating">
+        <ion-label>No se repiten</ion-label>
+      </ion-segment-button>
+    </ion-segment>
+  </ion-card>
+  <ion-card *ngIf="(repetition && order) && (useall )">
+    <ion-grid>
+      <ion-row>
+        <ion-col class="ion-text-center">
+          <h6>{{formula}}</h6>
+          <img src='./assets/img/{{image}}' class="img" text-center />
+        </ion-col>
+      </ion-row>
+      <form (ngSubmit)="logForm()">
+        <ion-row>
+          <ion-col *ngIf="onlyn">
+            <ion-item>
+              <ion-label>M =</ion-label>
+              <ion-input type="text" type="text" [(ngModel)]="todo.m"
+                name="m"></ion-input>
+            </ion-item>
+          </ion-col>
+          <ion-col>
+            <ion-item>
+              <ion-label>n =</ion-label>
+              <ion-input type="text" [(ngModel)]="todo.n"
+                name="n"></ion-input>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col class="ion-text-center">
+            <ion-button size="small" type="submit">Calcular</ion-button>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col class="ion-text-center">
+            <h3>{{response}}</h3>
+          </ion-col>
+        </ion-row>
+      </form>
+    </ion-grid>
+
+
+  </ion-card>
+
+
+</ion-content>
