@@ -33,6 +33,9 @@ export class CalcombinatorialPage implements OnInit {
     this.repetition = ev.detail.value;
     this.showequation();
   }
+  limpiarlawea(){
+    window.location.reload()
+  }
   showequation() {
     this.onlyn = true;
     if ((this.order && this.repetition) || this.useall) {

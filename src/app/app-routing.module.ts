@@ -25,7 +25,15 @@ const routes: Routes = [
       import('./calprobability/calprobability.module').then(
         (m) => m.CalprobabilityPageModule
       )
+  },  {
+    path: 'examplescom',
+    loadChildren: () => import('./examplescom/examplescom.module').then( m => m.ExamplescomPageModule)
+  },
+  {
+    path: 'examplesprobability',
+    loadChildren: () => import('./examplesprobability/examplesprobability.module').then( m => m.ExamplesprobabilityPageModule)
   }
+
 ];
 
 @NgModule({

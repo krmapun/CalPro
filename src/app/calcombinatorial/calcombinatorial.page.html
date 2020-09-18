@@ -1,15 +1,18 @@
-<ion-header>
-  <ion-toolbar>
+<ion-header  [translucent]="true">
+  <ion-toolbar color="tertiary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
     <ion-title>Teoría Combinatoria</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-  <ion-text color="primary" class="ion-text-center">
+<ion-content color="light">
+  <ion-text color="secondary" class="ion-text-center" >
     <h2>Selecione los criterios</h2>
   </ion-text>
   <ion-card>
-    <ion-segment (ionChange)="orderChanged($event)">
+    <ion-segment (ionChange)="orderChanged($event)"  color="secondary">
       <ion-segment-button value="orderimportant">
         <ion-label>importa el orden</ion-label>
       </ion-segment-button>
@@ -20,7 +23,7 @@
   </ion-card>
   <ion-card>
     <ion-segment *ngIf="order != 'ordernotimportant'"
-      (ionChange)="useallChanged($event)">
+      (ionChange)="useallChanged($event)" color="secondary">
       <ion-segment-button value="useall">
         <ion-label>Se usan todos</ion-label>
       </ion-segment-button>
@@ -30,7 +33,7 @@
     </ion-segment>
   </ion-card>
   <ion-card>
-    <ion-segment (ionChange)="repetitionChanged($event)">
+    <ion-segment (ionChange)="repetitionChanged($event)" color="secondary">
       <ion-segment-button value="repeating">
         <ion-label>Se repiten</ion-label>
       </ion-segment-button>
@@ -39,7 +42,7 @@
       </ion-segment-button>
     </ion-segment>
   </ion-card>
-  <ion-card *ngIf="(repetition && order) && (useall )">
+  <ion-card *ngIf="(order==='orderimportant' && useall && repetition) || (order==='ordernotimportant' && repetition)">
     <ion-grid>
       <ion-row>
         <ion-col class="ion-text-center">
@@ -51,14 +54,14 @@
         <ion-row>
           <ion-col *ngIf="onlyn">
             <ion-item>
-              <ion-label>M =</ion-label>
+              <ion-label color="secondary" style="font-weight: 900;">M =</ion-label>
               <ion-input type="text" type="text" [(ngModel)]="todo.m"
                 name="m"></ion-input>
             </ion-item>
           </ion-col>
           <ion-col>
             <ion-item>
-              <ion-label>n =</ion-label>
+              <ion-label color="secondary" style="font-weight: 900;">n =</ion-label>
               <ion-input type="text" [(ngModel)]="todo.n"
                 name="n"></ion-input>
             </ion-item>
@@ -66,10 +69,16 @@
         </ion-row>
         <ion-row>
           <ion-col class="ion-text-center">
+            <ion-button size="small" color="secondary" (click)="limpiarlawea()">Limpiar</ion-button>
+          </ion-col>
+          <ion-col class="ion-text-center">
             <ion-button size="small" type="submit">Calcular</ion-button>
           </ion-col>
         </ion-row>
         <ion-row>
+          <ion-col class="ion-text-center" >
+            <h3 class="solution">Solución: </h3>
+          </ion-col>
           <ion-col class="ion-text-center">
             <h3>{{response}}</h3>
           </ion-col>

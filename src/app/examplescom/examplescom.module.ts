@@ -4,17 +4,17 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { CalculadoraComPageRoutingModule } from './calculadora-com-routing.module';
+import { ExamplescomPageRoutingModule } from './examplescom-routing.module';
 
-import { CalculadoraComPage } from './calculadora-com.page';
+import { ExamplescomPage } from './examplescom.page';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    CalculadoraComPageRoutingModule
+    ExamplescomPageRoutingModule
   ],
-  declarations: [CalculadoraComPage]
+  declarations: [ExamplescomPage]
 })
-export class CalculadoraComPageModule {}
+export class ExamplescomPageModule {}
