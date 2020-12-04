@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AlertController } from "@ionic/angular";
 
 @Component({
   selector: 'app-calcuprototal',
@@ -10,7 +11,7 @@ export class CalcuprototalPage implements OnInit {
   todo = { a: null, b: null };
   response: string;
 
-  constructor() { }
+  constructor(public alertController: AlertController) { }
 
   ngOnInit() {
   }

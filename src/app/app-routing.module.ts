@@ -25,7 +25,8 @@ const routes: Routes = [
       import('./calprobability/calprobability.module').then(
         (m) => m.CalprobabilityPageModule
       )
-  },  {
+  },
+  {
     path: 'examplescom',
     loadChildren: () => import('./examplescom/examplescom.module').then( m => m.ExamplescomPageModule)
   },
@@ -48,10 +49,6 @@ const routes: Routes = [
   {
     path: 'calcuprototal',
     loadChildren: () => import('./calcuprototal/calcuprototal.module').then( m => m.CalcuprototalPageModule)
-  },
-  {
-    path: 'montygame',
-    loadChildren: () => import('./montygame/montygame.module').then( m => m.MontygamePageModule)
   }
 
 ];
