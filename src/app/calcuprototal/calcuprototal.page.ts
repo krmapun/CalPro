@@ -1,19 +1,19 @@
-import { Component, OnInit } from "@angular/core";
-import { AlertController } from "@ionic/angular";
+import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: "app-calprobability",
-  templateUrl: "./calprobability.page.html",
-  styleUrls: ["./calprobability.page.scss"],
+  selector: 'app-calcuprototal',
+  templateUrl: './calcuprototal.page.html',
+  styleUrls: ['./calcuprototal.page.scss'],
 })
-export class CalprobabilityPage implements OnInit {
-  
+export class CalcuprototalPage implements OnInit {
+
   todo = { a: null, b: null };
   response: string;
 
-  constructor(public alertController: AlertController) {}
+  constructor() { }
 
-  ngOnInit() {}
+  ngOnInit() {
+  }
 
   limpiarlawea() {
     window.location.reload();
@@ -31,6 +31,11 @@ export class CalprobabilityPage implements OnInit {
     await alert.present();
   }
 
+  AgregarValor1(){
+
+    alert('asdlkjasdj')
+  }
+
   logForm() {
     let numberA = parseFloat(this.todo.a);
     let numberB = parseFloat(this.todo.b);
@@ -46,4 +51,5 @@ export class CalprobabilityPage implements OnInit {
       );
     }
   }
+
 }

@@ -1,0 +1,17 @@
+.inputtxt{
+    padding: 0;
+    width: 50px;
+    position: absolute;
+}
+.branch{
+    display: block;
+    position: relative;
+    width: 100px;
+    border: 1px black solid;
+    margin: 0;
+    background: thistle;
+    border-radius: 3px;
+}
+.branch label {
+    font-weight: 800;
+}

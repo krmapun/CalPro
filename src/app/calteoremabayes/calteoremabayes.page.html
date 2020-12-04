@@ -11,46 +11,52 @@
   <ion-card>
     <ion-card-header>
       <div class="center">
-        <img
-          src="./assets/img/procondicionaimg.png"
-          class="img"
-          text-center
-          height="100"
-        />
-        <img
-          src="./assets/img/procondicionaformula.png"
-          class="img"
-          text-center
-          height="50"
-        />
         <h5>
-          Calcula la probabilidad de que ocurra <b>A</b> dado que ha ocurrido
-          <b>B</b>
+          <b>Calcular teorema de bayes</b>
         </h5>
       </div>
     </ion-card-header>
+    <div class="center">
+      <img
+        src="./assets/img/teorema-de-bayes.png"
+        class="img"
+        text-center
+        height="70"
+        width="250"
+      />
+    </div>
     <form (ngSubmit)="logForm()">
       <ion-grid>
         <ion-row>
           <ion-col>
             <ion-item>
               <ion-label color="secondary" style="font-weight: 900"
-                >A% =</ion-label
+                >P(A) =</ion-label
               >
               <ion-input
                 type="text"
                 type="text"
                 name="a"
-                [(ngModel)]="todo.a"
+                [(ngModel)]="todo.pa"
               ></ion-input>
             </ion-item>
           </ion-col>
           <ion-col>
             <ion-item>
               <ion-label color="secondary" style="font-weight: 900"
-                >B% =</ion-label
+                >P(B) =</ion-label
               >
-              <ion-input type="text" name="b" [(ngModel)]="todo.b"></ion-input>
+              <ion-input type="text" name="b" [(ngModel)]="todo.pb"></ion-input>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <ion-item>
+              <ion-label color="secondary" style="font-weight: 900"
+                >P(B/A) =</ion-label
+              >
+              <ion-input type="text" name="b" [(ngModel)]="todo.pba"></ion-input>
             </ion-item>
           </ion-col>
         </ion-row>

@@ -1,4 +1,4 @@
-<ion-header  [translucent]="true">
+<ion-header [translucent]="true">
   <ion-toolbar color="tertiary">
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
@@ -7,35 +7,103 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true" color="light">
+<ion-content [fullscreen]="true" color="light" >
   <ion-header collapse="condense">
     <ion-toolbar>
       <ion-title size="large"></ion-title>
     </ion-toolbar>
   </ion-header>
-
-  <div id="container" >
-    <ion-card >
+  <div id="container" class="scroll" slot="fixed">
+    <ion-card>
       <ion-card-header>
         <ion-card-title>Teoría Combinatoria</ion-card-title>
         <ion-card-subtitle>Conteo, Permutación y arreglos</ion-card-subtitle>
       </ion-card-header>
       <ion-card-content>
-        <ion-button expand="block" fill="outline"
-          [routerLink]="['/calcombinatorial']">Calculadora</ion-button>
-        <ion-button expand="block" fill="outline"
-          [routerLink]="['/examplescom']">Ejemplos</ion-button>
+        <ion-button
+          expand="block"
+          fill="outline"
+          [routerLink]="['/calcombinatorial']"
+          >Calculadora</ion-button
+        >
+        <ion-button
+          expand="block"
+          fill="outline"
+          [routerLink]="['/examplescom']"
+          >Ejemplos</ion-button
+        >
       </ion-card-content>
     </ion-card>
     <ion-card>
       <ion-card-header>
-        <ion-card-title>Probabilidades</ion-card-title>
-        <ion-card-subtitle>----</ion-card-subtitle>
+        <ion-card-title>Probabilidad Condicional</ion-card-title>
       </ion-card-header>
       <ion-card-content>
-        <ion-button expand="block" fill="outline" [routerLink]="['/calprobability']">Calculadora</ion-button>
-        <ion-button expand="block" fill="outline" [routerLink]="['/examplesprobability']">Ejemplos</ion-button>
+        <ion-button
+          expand="block"
+          fill="outline"
+          [routerLink]="['/calprobability']"
+          >Calculadora</ion-button
+        >
+        <ion-button
+          expand="block"
+          fill="outline"
+          [routerLink]="['/examplesprobability']"
+          >Ejemplos</ion-button
+        >
       </ion-card-content>
     </ion-card>
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Probabilidad Total</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-button
+          expand="block"
+          fill="outline"
+          [routerLink]="['/calcuprototal']"
+          >Calculadora</ion-button
+        >
+        <ion-button
+          expand="block"
+          fill="outline"
+          [routerLink]="['/exampleprobtotal']"
+          >Ejemplos</ion-button
+        >
+      </ion-card-content>
+    </ion-card>
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Teorema de bayes</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-button
+          expand="block"
+          fill="outline"
+          [routerLink]="['/calteoremabayes']"
+          >Calculadora</ion-button
+        >
+        <ion-button
+          expand="block"
+          fill="outline"
+          [routerLink]="['/examplebayes']"
+          >Ejemplos</ion-button
+        >
+      </ion-card-content>
+    </ion-card> 
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Problema de Monty Hall</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-button
+          expand="block"
+          fill="outline"
+          [routerLink]="['/montygame']"
+          >Juego</ion-button
+        >
+      </ion-card-content>
+    </ion-card> 
+    <div id="scrollspace"></div>
   </div>
 </ion-content>

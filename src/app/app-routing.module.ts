@@ -32,6 +32,26 @@ const routes: Routes = [
   {
     path: 'examplesprobability',
     loadChildren: () => import('./examplesprobability/examplesprobability.module').then( m => m.ExamplesprobabilityPageModule)
+  },
+  {
+    path: 'calteoremabayes',
+    loadChildren: () => import('./calteoremabayes/calteoremabayes.module').then( m => m.CalteoremabayesPageModule)
+  },
+  {
+    path: 'examplebayes',
+    loadChildren: () => import('./examplebayes/examplebayes.module').then( m => m.ExamplebayesPageModule)
+  },
+  {
+    path: 'exampleprobtotal',
+    loadChildren: () => import('./exampleprobtotal/exampleprobtotal.module').then( m => m.ExampleprobtotalPageModule)
+  },
+  {
+    path: 'calcuprototal',
+    loadChildren: () => import('./calcuprototal/calcuprototal.module').then( m => m.CalcuprototalPageModule)
+  },
+  {
+    path: 'montygame',
+    loadChildren: () => import('./montygame/montygame.module').then( m => m.MontygamePageModule)
   }
 
 ];

@@ -1,0 +1,33 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="tertiary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Calculadora Probabilidad Total</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="light">
+  <ion-card>
+    <ion-card-header>
+      <div class="center">
+        <h5>
+          <b>Probabilidad Total</b>
+        </h5>
+      </div>
+    </ion-card-header>
+    <form (ngSubmit)="logForm()">
+      <div>
+        <button (click)="AgregarValor1()">Agregar Variable</button>
+      </div>
+      <div *ngIf>
+        <!-- {{padres}} -->
+      </div>
+      <div class="branch">
+        <label for="A">A.</label>
+        <ion-checkbox slot="end"></ion-checkbox>
+        <input type="text" name="b" class="inputtxt">
+      </div>
+    </form>
+  </ion-card>
+</ion-content>
